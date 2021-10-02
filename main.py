@@ -16,10 +16,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
-
-
-
 with open("dammam_districts_with_indicators.geojson") as f:
     dammam_indicators = json.load(f)
 
