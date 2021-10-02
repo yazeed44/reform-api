@@ -4,9 +4,10 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
+with open("dataframe.geojson") as f:
+    dataframe = json.load(f)
+
 
 @app.get("/")
 async def root():
-    with open("districts.json") as f:
-        districts = json.load(f)
-        return districts
+    return dataframe
